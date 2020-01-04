@@ -40,10 +40,11 @@ public class GoodsServiceImplTest {
 	
 		//调用工具类
 		List<String> list = StreamUtil.readLine(this.getClass().getResourceAsStream("/data.txt"));
-	  for (int j = 1; j < list.size(); j++) {
+	  for (int j = 0; j < list.size(); j++) {
 			 Goods goods = new Goods();
 			 String[] s = list.get(j).split("\\==");
 			 goods.setId(Integer.parseInt(s[0]));//封装ID
+			 
 			 if(StringUtil.hasText(s[1]))
 			 goods.setName(s[1]);
 			 //处理价格

@@ -7,21 +7,39 @@ import java.math.BigDecimal;
  * @ClassName: Goods 
  * @Description: TODO
  * @author: charles
- * @date: 2020Äê1ÔÂ3ÈÕ ÉÏÎç9:15:39
+ * @date: 2020ï¿½ï¿½1ï¿½ï¿½3ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½9:15:39
  */
 public class Goods implements Serializable {
 	
 	
-	/**
-	 * @fieldName: serialVersionUID
-	 * @fieldType: long
-	 * @Description: TODO
-	 */
+	
 	private static final long serialVersionUID = 1L;
 	private Integer id;
 	private String name;
 	private BigDecimal price;
 	private Integer sales;
+	
+	private StatusEnum statusEnum;//çŠ¶æ€å±æ€§
+	
+	
+	
+	public StatusEnum getStatusEnum() {
+		return statusEnum;
+	}
+	public void setStatusEnum(StatusEnum statusEnum) {
+		this.statusEnum = statusEnum;
+	}
+	private AreaEnum areaEnum;//åŒºåŸŸã€‚æšä¸¾ç±»å‹
+	
+	
+	
+	
+	public AreaEnum getAreaEnum() {
+		return areaEnum;
+	}
+	public void setAreaEnum(AreaEnum areaEnum) {
+		this.areaEnum = areaEnum;
+	}
 	public Integer getId() {
 		return id;
 	}

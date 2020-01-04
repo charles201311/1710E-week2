@@ -24,8 +24,5 @@ public class GoodsController {
 		model.addAttribute("info", info);
 		model.addAttribute("goodsVO", goodsVO);
 		return "goods";
-		
-		
-		
 	}
 }

@@ -4,15 +4,30 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
 
-<!-- 别名配置 -->
- <typeAliases>
-   <package name="com.bobo.week2.domain"/>
- </typeAliases>
- 
- 
- <!-- 配置分页助手拦截器 -->
-<plugins>
- <plugin interceptor="com.github.pagehelper.PageInterceptor"></plugin>
- 
- </plugins>
+	<!-- 别名配置 -->
+	<typeAliases>
+		<package name="com.bobo.week2.domain" />
+	</typeAliases>
+	
+	
+	<typeHandlers>
+	<!-- 处理枚举类  -->
+	  <!--EnumOrdinalTypeHandle 通过下标去设置枚举类  -->
+	  	<!-- 处理状态的枚举 -->
+	   <typeHandler handler="org.apache.ibatis.type.EnumOrdinalTypeHandler"
+	    javaType="com.bobo.week2.domain.StatusEnum"
+	   />		
+	  
+	    <!-- 处理地区的枚举类 -->
+		<typeHandler
+			handler="org.apache.ibatis.type.EnumOrdinalTypeHandler"
+			javaType="com.bobo.week2.domain.AreaEnum" />
+	</typeHandlers>
+	
+	<!-- 配置分页助手拦截器 -->
+	<plugins>
+		<plugin interceptor="com.github.pagehelper.PageInterceptor"></plugin>
+
+	</plugins>
+
 </configuration>

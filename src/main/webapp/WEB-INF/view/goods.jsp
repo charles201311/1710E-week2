@@ -41,6 +41,8 @@
 			<td>名称</td>
 			<td>价格</td>
 			<td>销售比</td>
+			<td>地区</td>
+			<td>审核状态</td>
 		</tr>
 		<c:forEach items="${info.list}" var="g">
 		
@@ -49,6 +51,8 @@
 		  <td>${g.name }</td>
 		  <td>${g.price }</td>
 		  <td>${g.sales }</td>
+		  <td>${g.areaEnum.name}</td>
+		  <td>${g.statusEnum.name}</td>
 		 </tr>
 		
 		</c:forEach>
